@@ -36,7 +36,7 @@ public class ThreeNumberSun {
         return triplets;
     }
 
-    public static List<Integer[]> twoPointerSlidingWindow(int[] array, int sum) {
+    public static List<Integer[]> twoPointerSlidingWindow(int[] array, int targetSum) {
         Arrays.sort(array);
         List<Integer[]> triplets = new ArrayList<>();
         for (int i = 0; i < array.length - 2; i++) {
@@ -45,13 +45,13 @@ public class ThreeNumberSun {
 
             while (left < right) {
                 int tmp = array[i] + array[left] + array[right];
-                if (tmp == sum) {
+                if (tmp == targetSum) {
                     triplets.add(new Integer[]{array[i], array[left], array[right]});
                     left++;
                     right--;
-                } else if (tmp < sum) {
+                } else if (tmp < targetSum) {
                     left++;
-                } else if (tmp > sum) {
+                } else if (tmp > targetSum) {
                     right--;
                 }
             }
