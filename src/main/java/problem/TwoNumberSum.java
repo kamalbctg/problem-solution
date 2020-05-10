@@ -20,7 +20,7 @@ import java.util.HashMap;
  * output: = [2, 7]
  */
 public class TwoNumberSum {
-    // Time complexity: O(n^2)
+    // Time complexity: O(n^2), Space: O(1)
     public static int[] bruteForce(int[] arr, int sum) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
@@ -33,7 +33,7 @@ public class TwoNumberSum {
     }
 
 
-    // Time complexity: O(n)
+    // Time complexity: O(n), Space: O(n)
     // x = sum - y;
     public static int[] usingHashMap(int[] arr, int sum) {
         HashMap<Integer, Boolean> numberMap = new HashMap<>();
@@ -47,7 +47,7 @@ public class TwoNumberSum {
         return new int[]{};
     }
 
-    // Time complexity: O(nlogn)
+    // Time complexity: O(nlogn), Space: O(n)
     public static int[] twoPointerSlidingWindow(int[] arr, int sum) {
         HashMap<Integer, Boolean> numberMap = new HashMap<>();
         Arrays.sort(arr);
