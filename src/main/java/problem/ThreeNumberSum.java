@@ -18,7 +18,7 @@ import java.util.List;
  * Input: array = [12, 3, 1, 2, -6, 5, -8, 6], sum = 0
  * output: = [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
  */
-public class ThreeNumberSun {
+public class ThreeNumberSum {
 
     //  Complexity  Time: O(n^3) & Space: O(n)
     public static List<Integer[]> bruteForce(int[] array, int sum) {

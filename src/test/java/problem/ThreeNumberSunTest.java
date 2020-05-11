@@ -23,7 +23,7 @@ public class ThreeNumberSunTest {
     @Test
     public void testBruteForce() {
         for (int i = 0; i < input.length; i++) {
-            List<Integer[]> actual = ThreeNumberSun.bruteForce(input[i], sum[i]);
+            List<Integer[]> actual = ThreeNumberSum.bruteForce(input[i], sum[i]);
             actual.forEach(a -> {
                 System.out.println("[" + Joiner.on(",").join(a) + "]");
             });
@@ -33,7 +33,7 @@ public class ThreeNumberSunTest {
     @Test
     public void twoPointerSlidingWindow() {
         for (int i = 0; i < input.length; i++) {
-            List<Integer[]> actual = ThreeNumberSun.twoPointerSlidingWindow(input[i], sum[i]);
+            List<Integer[]> actual = ThreeNumberSum.twoPointerSlidingWindow(input[i], sum[i]);
             actual.forEach(a -> {
                 System.out.println("[" + Joiner.on(",").join(a) + "]");
             });
