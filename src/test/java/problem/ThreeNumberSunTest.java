@@ -1,13 +1,12 @@
 package problem;
 
 import com.google.common.base.Joiner;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ThreeNumberSunTest{
+public class ThreeNumberSunTest {
     int[][] input = {
             {12, 3, 1, 2, -6, 5, -8, 6}};
 

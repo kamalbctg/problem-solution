@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class ThreeNumberSun {
 
-    // Time complexity: O(n^3)
+    //  Complexity  Time: O(n^3) & Space: O(n)
     public static List<Integer[]> bruteForce(int[] array, int sum) {
         List<Integer[]> triplets = new ArrayList<>();
         for (int i = 0; i < array.length; i++) {
@@ -36,22 +36,23 @@ public class ThreeNumberSun {
         return triplets;
     }
 
-    public static List<Integer[]> twoPointerSlidingWindow(int[] array, int targetSum) {
-        Arrays.sort(array);
+    //  Complexity  Time: O(n^2) & Space: O(n)
+    public static List<Integer[]> twoPointerSlidingWindow(int[] array, int sum) {
         List<Integer[]> triplets = new ArrayList<>();
+        Arrays.sort(array);
+
         for (int i = 0; i < array.length - 2; i++) {
-            int left = i + 1;
+            int left = i;
             int right = array.length - 1;
 
             while (left < right) {
-                int tmp = array[i] + array[left] + array[right];
-                if (tmp == targetSum) {
+                int tmpSum = array[i] + array[left] + array[right];
+
+                if (tmpSum == sum) {
                     triplets.add(new Integer[]{array[i], array[left], array[right]});
+                } else if(tmpSum < sum){
                     left++;
-                    right--;
-                } else if (tmp < targetSum) {
-                    left++;
-                } else if (tmp > targetSum) {
+                } else if (tmpSum > sum){
                     right--;
                 }
             }
