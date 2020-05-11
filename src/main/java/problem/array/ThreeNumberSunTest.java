@@ -1,7 +1,8 @@
-package problem;
+package problem.array;
 
 import com.google.common.base.Joiner;
 import org.junit.Test;
+import problem.array.ThreeNumberSum;
 
 import java.util.ArrayList;
 import java.util.List;

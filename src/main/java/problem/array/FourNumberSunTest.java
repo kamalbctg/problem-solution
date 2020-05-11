@@ -1,9 +1,9 @@
-package problem;
+package problem.array;
 
 import com.google.common.base.Joiner;
 import org.junit.Test;
+import problem.array.FourNumberSum;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class FourNumberSunTest {

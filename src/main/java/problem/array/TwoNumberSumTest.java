@@ -1,10 +1,10 @@
-package problem;
+package problem.array;
 
 
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.Arrays;
-import static problem.TwoNumberSum.*;
+import static problem.array.TwoNumberSum.*;
 
 public class TwoNumberSumTest {
     int[][] input = {
